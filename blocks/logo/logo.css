@@ -1,0 +1,17 @@
+.logo {
+  padding: 45px 0 40px 0;
+  max-width: 100%;
+}
+
+@media (max-width: 940px) {
+  .logo {
+    padding-left: 30px;
+  }
+}
+
+@media (max-width: 440px) {
+  .logo {
+    padding: 28px 0 32px 27px;
+    max-width: 104px;
+  }
+}

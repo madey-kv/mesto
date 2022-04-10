@@ -1,0 +1,11 @@
+.button_type_add {
+  margin-left: auto;
+  padding-left: 20px;
+}
+
+@media (max-width: 720px) {
+  .button_type_add {
+    margin-left: 0;
+    padding-left: 0;
+  }
+}

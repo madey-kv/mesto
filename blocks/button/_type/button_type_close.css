@@ -1,0 +1,13 @@
+.button_type_close {
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 540px) {
+  .button_type_close {
+    top: -48px;
+    right: 0;
+  }
+}

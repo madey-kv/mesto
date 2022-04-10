@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mesto | Russia</title>
+
+  <link rel="preload" href="vendor/fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="vendor/fonts/Inter-Medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="vendor/fonts/Inter-Black.woff2" as="font" type="font/woff2" crossorigin>
+
+  <link rel="stylesheet" href="./pages/index.css">
+</head>
+<body class="page">
+  <div class="popup">
+    <div class="popup__container">
+      <button class="button button_type_close"><img src="./images/Close-Button.svg" alt="кнопка-крестик"></button>
+
+      <form class="form">
+        <h2 class="form__title">Редактировать профиль</h2>
+        <input type="text" value="Ксения Мадей" class="form__item form__item_name" placeholder="Ваше имя" required>
+        <input type="text" value="Инженер-конструктор, студентка Практикума" class="form__item form__item_job" placeholder="Описание профиля" required>
+        <button type="submit" class="button button_type_save">Сохранить</button>
+      </form>
+    </div>
+  </div>
+  <header class="header">
+      <img src="./images/logo.svg" alt="логотип сайта" class="logo">
+    
+    <div class="header__line"></div>
+
+    <div class="profile">
+      <div>
+        <img src="./images/my-photo.jpg" alt="аватар профиля" class="profile__photo">
+      </div>
+      
+      <div class="profile__info">
+        <div class="profile__title">
+          <h1 class="profile__name">Ксения Мадей</h1>
+
+          <button class="button button_type_edit"><img src="./images/Edit-Button.svg" alt="кнопка редактирования профиля"></button>
+        </div>
+        <p class="profile__description">Инженер-конструктор, студентка Практикума</p>
+      </div>
+
+      <button class="button button_type_add">
+        <picture>
+          <source srcset="./images/Add-Button-big.svg" media="(max-width: 720px)">
+          <img src="./images/Add-Button.svg" alt="кнопка для добавления карточек">
+        </picture>
+      </button>
+    </div>
+  </header>
+
+  <main class="cards">
+    <ul class="cards__list">
+      <li class="cards__item">
+        <img src="./images/kalmykia.jpg" alt="хурул в Калмыкии" class="cards__photo">
+        <div class="cards__text">
+          <h2 class="cards__title">Калмыкия</h2>
+          <button class="button button_type_like"><img src="./images/Like-Button.svg" alt="кнопка-сердечко"></button>
+        </div>
+      </li>
+
+      <li class="cards__item">
+        <img src="./images/dagestan.jpg" alt="горы Дагестана" class="cards__photo">
+        <div class="cards__text">
+          <h2 class="cards__title">Дагестан</h2>
+          <button class="button button_type_like"><img src="./images/Like-Button.svg" alt="кнопка-сердечко"></button>
+        </div>
+      </li>
+
+      <li class="cards__item">
+        <img src="./images/saint-petersburg.jpg" alt="Казанский собор" class="cards__photo">
+        <div class="cards__text">
+          <h2 class="cards__title">Санкт-Петербург</h2>
+          <button class="button button_type_like"><img src="./images/Like-Button.svg" alt="кнопка-сердечко"></button>
+        </div>
+      </li>
+
+      <li class="cards__item">
+        <img src="./images/sevastopol.jpg" alt="памятник затопленным кораблям" class="cards__photo">
+        <div class="cards__text">
+          <h2 class="cards__title">Севастополь</h2>
+          <button class="button button_type_like"><img src="./images/Like-Button.svg" alt="кнопка-сердечко"></button>
+        </div>
+      </li>
+
+      <li class="cards__item">
+        <img src="./images/moscow.jpg" alt="храм Василия Блаженного" class="cards__photo">
+        <div class="cards__text">
+          <h2 class="cards__title">Москва</h2>
+          <button class="button button_type_like"><img src="./images/Like-Button.svg" alt="кнопка-сердечко"></button>
+        </div>
+      </li>
+
+      <li class="cards__item">
+        <img src="./images/sochi.jpg" alt="морской порт Сочи" class="cards__photo">
+        <div class="cards__text">
+          <h2 class="cards__title">Сочи</h2>
+          <button class="button button_type_like"><img src="./images/Like-Button.svg" alt="кнопка-сердечко"></button>
+        </div>
+      </li>
+    </ul>
+  </main>
+  
+
+  <footer class="footer">
+    <p class="footer__copyright">&copy;2022 Mesto Russia</p>
+  </footer> 
+  <script src="./js/index.js"></script>
+</body>
+</html>

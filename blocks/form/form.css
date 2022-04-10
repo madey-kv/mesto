@@ -1,0 +1,5 @@
+.form {
+  color: #000;
+  display: flex;
+  flex-direction: column;
+}

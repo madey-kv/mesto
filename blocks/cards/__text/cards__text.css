@@ -1,0 +1,11 @@
+.cards__text {
+  display: flex;
+  width: 100%;
+  padding: 25px 15px 31px 21px;
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: baseline;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
