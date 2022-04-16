@@ -7,7 +7,8 @@
 
 @media (max-width: 540px) {
   .button_type_close {
-    top: -48px;
+    top: -36px;
     right: 0;
+    max-width: 20px;
   }
 }

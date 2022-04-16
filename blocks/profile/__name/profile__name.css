@@ -4,6 +4,10 @@
   line-height: 48px;
   margin: 0;
   padding-right: 18px;
+  max-width: 294px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 @media (max-width: 800px) {
@@ -18,5 +22,9 @@
     padding-right: 10px;
     font-size: 27px;
     line-height: 33px;
+    max-width: 189px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
   }
 }
