@@ -1,0 +1,8 @@
+.button_type_card-open {
+    background-color: transparent;
+    min-height: 282px;
+}
+
+.button_type_card-open:hover {
+    opacity: 1;
+}

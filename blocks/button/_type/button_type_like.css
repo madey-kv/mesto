@@ -1,9 +1,9 @@
-.button_type_like:hover {
-  opacity: 0.5;
+.button_type_like {
+  background: transparent url(../../../images/Like-Button.svg);
+  width: 22px;
+  height: 19px;
 }
 
-.button_type_like:active {
-  opacity: 1;
-  background-repeat: no-repeat;
-  background-image: url(../../../images/Like-Button-active.svg);
+.button_type_like:hover {
+  opacity: 0.5;
 }

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e5df893b-0782-44fe-8da3-554c854210c8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/blocks/button/_type/button_type_like.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/button/_type/button_type_like.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/cards/__item/cards__item.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/cards/__item/cards__item.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/cards/__title/cards__title.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/cards/__title/cards__title.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/popup/_opened/popup_opened.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/popup/_opened/popup_opened.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/popup/popup.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/popup/popup.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/index.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="284X1ZxULRUK0KnkNo0HjWkcLDT" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/xeniama/dev/mesto&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/blocks/popup/_card-active" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.index.html (1)">
+    <configuration name="index.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/index.js/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/mesto/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.index.html (1)" />
+        <item itemvalue="JavaScript Debug.index.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e5df893b-0782-44fe-8da3-554c854210c8" name="Changes" comment="" />
+      <created>1650476618646</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1650476618646</updated>
+      <workItem from="1650476620830" duration="9000" />
+      <workItem from="1650476671446" duration="201000" />
+      <workItem from="1650528262900" duration="8369000" />
+      <workItem from="1650561794676" duration="3517000" />
+      <workItem from="1650784705944" duration="5833000" />
+      <workItem from="1650791577031" duration="67000" />
+      <workItem from="1650791651542" duration="12611000" />
+      <workItem from="1650871758497" duration="8751000" />
+      <workItem from="1650885673044" duration="6792000" />
+      <workItem from="1650892638441" duration="81000" />
+      <workItem from="1650892762303" duration="1563000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
