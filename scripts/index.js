@@ -25,7 +25,6 @@ let cardsList = document.querySelector('.cards__list');
 let cardPopup = document.querySelector('.popup_card');
 let popupImage = document.getElementById('popup__card-photo');
 let popupName = cardPopup.querySelector('.popup__card-name');
-let closeButtonPreview = cardPopup.querySelector('.button_type_close');
 
 const initialCards = [
   {
@@ -102,16 +101,19 @@ function addCard(card) {
   const cardElement = cardTemplate.cloneNode(true);
   const cardImage = cardElement.querySelector('.cards__photo');
   const cardTitle = cardElement.querySelector('.cards__title');
-  const cardLike = cardElement.querySelector('.button_type_like');
-  const cardDelete = cardElement.querySelector('.button_type_delete');
+
+  let likeCardButton = cardElement.querySelector('.button_type_like');
+  let deleteCardButton = cardElement.querySelector('.button_type_delete');
+  let closeButtonPreview = cardPopup.querySelector('.button_type_close');
 
   cardTitle.textContent = card.name;
   cardImage.alt = card.name;
   cardImage.src = card.link;
 
-  cardDelete.addEventListener('click', deleteCard);
-  cardLike.addEventListener('click', likeCard);
+  deleteCardButton.addEventListener('click', deleteCard);
+  likeCardButton.addEventListener('click', likeCard);
   cardImage.addEventListener('click', () => cardPreview(card.link, card.name));
+  closeButtonPreview.addEventListener('click', popupClosedPreview);
   return cardElement;
 }
 
@@ -130,10 +132,10 @@ function addNewCard(event) {
   popupClosedAdd();
 }
 
-function cardPreview(link, alt) {
+function cardPreview(link, name) {
   popupImage.src = link;
-  popupImage.alt = alt;
-  popupName.textContent = alt;
+  popupImage.alt = name;
+  popupName.textContent = name;
   openPreview();
 }
 
@@ -145,4 +147,3 @@ closeButtonEdit.addEventListener('click', popupClosedEdit);
 closeButtonAdd.addEventListener('click', popupClosedAdd);
 formElementEdit.addEventListener('submit', formSubmitHandlerEdit);
 formElementAdd.addEventListener('submit', addNewCard);
-closeButtonPreview.addEventListener('click', popupClosedPreview);
