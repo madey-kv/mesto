@@ -1,91 +1,48 @@
-let page = document.querySelector('.page');
+const page = document.querySelector('.page');
 
-let openButtonEdit = document.getElementById('open-edit');
-let openButtonAdd = document.getElementById('open-add');
-let closeButtonEdit = document.getElementById('close-edit');
-let closeButtonAdd = document.getElementById('close-add');
+const buttonOpenPopupEdit = page.querySelector('.button_type_open-edit');
+const buttonOpenPopupAdd = page.querySelector('.button_type_open-add');
+const buttonClosePopupEdit = page.querySelector('.button_type_close-edit');
+const buttonClosePopupAdd = page.querySelector('.button_type_close-add');
 
-let popupEdit = page.querySelector('.popup_edit');
-let popupAdd = page.querySelector('.popup_add');
-let popupPreview = page.querySelector('.popup_card');
+const popupEdit = page.querySelector('.popup_edit');
+const popupAdd = page.querySelector('.popup_add');
+const popupPreview = page.querySelector('.popup_preview');
 
-let formElementEdit = page.querySelector('.popup__form_edit');
-let formElementAdd = page.querySelector('.popup__form_add');
+const formElementEdit = page.querySelector('.popup__form_edit');
+const formElementAdd = page.querySelector('.popup__form_add');
 
-let nameInput = formElementEdit.querySelector('.popup__item_type_name');
-let jobInput = formElementEdit.querySelector('.popup__item_type_job');
-let cardInput = page.querySelector('.popup__item_type_card-name');
-let linkInput = page.querySelector('.popup__item_type_card-edit');
+const nameInput = formElementEdit.querySelector('.popup__item_type_name');
+const jobInput = formElementEdit.querySelector('.popup__item_type_job');
+const cardInput = page.querySelector('.popup__item_type_card-name');
+const linkInput = page.querySelector('.popup__item_type_card-link');
 
-let name = page.querySelector('.profile__name');
-let job = page.querySelector('.profile__description');
+const name = page.querySelector('.profile__name');
+const job = page.querySelector('.profile__description');
 
-let cardsList = document.querySelector('.cards__list');
+const cardsList = document.querySelector('.cards__list');
 
-let cardPopup = document.querySelector('.popup_card');
-let popupImage = document.getElementById('popup__card-photo');
-let popupName = cardPopup.querySelector('.popup__card-name');
+const popupImage = page.querySelector('.popup__preview-photo');
+const popupName = page.querySelector('.popup__preview-name');
 
-const initialCards = [
-  {
-    name: 'Архыз',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
-  },
-  {
-    name: 'Челябинская область',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg'
-  },
-  {
-    name: 'Иваново',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg'
-  },
-  {
-    name: 'Камчатка',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg'
-  },
-  {
-    name: 'Холмогорский район',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg'
-  },
-  {
-    name: 'Байкал',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
-  }
-];
-
-function popupOpenedEdit () {
-  popupEdit.classList.add('popup_opened');
-  nameInput.value = name.textContent;
-  jobInput.value = job.textContent;
+function openPopup(popup) {
+  popup.classList.add('popup_opened');
 }
 
-function popupOpenedAdd () {
-  popupAdd.classList.add('popup_opened');
-  cardInput.value = '';
-  linkInput.value = '';
+function openPopupAdd () {
+  openPopup(popupAdd);
+  formElementAdd.reset();
 }
 
-function openPreview () {
-  popupPreview.classList.add('popup_opened');
+function closePopup(popup) {
+  popup.classList.remove('popup_opened');
 }
 
-function popupClosedEdit () {
-  popupEdit.classList.remove('popup_opened');
-}
-
-function popupClosedAdd () {
-  popupAdd.classList.remove('popup_opened');
-}
-
-function popupClosedPreview () {
-  popupPreview.classList.remove('popup_opened');
-}
-
-function formSubmitHandlerEdit (evt) {
-  evt.preventDefault();
+function formSubmitHandlerEdit (event) {
+  event.preventDefault();
   name.textContent = nameInput.value;
   job.textContent = jobInput.value;
-  popupClosedEdit();
+  closePopup(popupEdit);
 }
 
 const deleteCard = (event) => {
@@ -96,54 +53,55 @@ const likeCard = (event) => {
   event.target.classList.toggle('button_type_like-active');
 }
 
-function addCard(card) {
+function openCardPreview(link, name) {
+  popupImage.src = link;
+  popupImage.alt = name;
+  popupName.textContent = name;
+  openPopup(popupPreview);
+}
+
+function createCard(card) {
   const cardTemplate = document.querySelector('.cards-template').content;
   const cardElement = cardTemplate.cloneNode(true);
   const cardImage = cardElement.querySelector('.cards__photo');
   const cardTitle = cardElement.querySelector('.cards__title');
 
-  let likeCardButton = cardElement.querySelector('.button_type_like');
-  let deleteCardButton = cardElement.querySelector('.button_type_delete');
-  let closeButtonPreview = cardPopup.querySelector('.button_type_close');
+  const buttonLikeCard = cardElement.querySelector('.button_type_like');
+  const buttonDeleteCard = cardElement.querySelector('.button_type_delete');
+  const buttonClosePopupPreview = popupPreview.querySelector('.button_type_close');
 
   cardTitle.textContent = card.name;
   cardImage.alt = card.name;
   cardImage.src = card.link;
 
-  deleteCardButton.addEventListener('click', deleteCard);
-  likeCardButton.addEventListener('click', likeCard);
-  cardImage.addEventListener('click', () => cardPreview(card.link, card.name));
-  closeButtonPreview.addEventListener('click', popupClosedPreview);
+  buttonDeleteCard.addEventListener('click', deleteCard);
+  buttonLikeCard.addEventListener('click', likeCard);
+  cardImage.addEventListener('click', () => openCardPreview(card.link, card.name));
+  buttonClosePopupPreview.addEventListener('click', () => closePopup(popupPreview));
+
   return cardElement;
 }
 
-function renderList() {
+function renderCardList() {
   const result = initialCards.map(item => {
-    const newCard = addCard(item);
-    return newCard;
+    const initialCard = createCard(item);
+    return initialCard;
   });
   cardsList.append(...result);
 }
 
-function addNewCard(event) {
+renderCardList();
+
+function formSubmitHandlerAdd(event) {
   event.preventDefault();
-  const element = addCard({name: cardInput.value, link: linkInput.value});
-  cardsList.prepend(element);
-  popupClosedAdd();
+  const newCard = createCard({name: cardInput.value, link: linkInput.value});
+  cardsList.prepend(newCard);
+  closePopup(popupAdd);
 }
 
-function cardPreview(link, name) {
-  popupImage.src = link;
-  popupImage.alt = name;
-  popupName.textContent = name;
-  openPreview();
-}
-
-renderList();
-
-openButtonEdit.addEventListener('click', popupOpenedEdit);
-openButtonAdd.addEventListener('click', popupOpenedAdd);
-closeButtonEdit.addEventListener('click', popupClosedEdit);
-closeButtonAdd.addEventListener('click', popupClosedAdd);
+buttonOpenPopupEdit.addEventListener('click', () => openPopup(popupEdit));
+buttonOpenPopupAdd.addEventListener('click', openPopupAdd);
+buttonClosePopupEdit.addEventListener('click', () => closePopup(popupEdit));
+buttonClosePopupAdd.addEventListener('click', () => closePopup(popupAdd));
 formElementEdit.addEventListener('submit', formSubmitHandlerEdit);
-formElementAdd.addEventListener('submit', addNewCard);
+formElementAdd.addEventListener('submit', formSubmitHandlerAdd);

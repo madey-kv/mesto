@@ -19,7 +19,7 @@
         <div class="profile__title">
           <h1 class="profile__name">Ксения Мадей</h1>
 
-          <button type="button" class="button" id="open-edit">
+          <button type="button" class="button button_type_open-edit">
             <picture>
               <source srcset="./images/Edit-Button-small.svg" media="(max-width: 440px)">
               <img src="./images/Edit-Button.svg" alt="кнопка редактирования профиля">
@@ -29,7 +29,7 @@
         <p class="profile__description">Инженер-конструктор, студентка Практикума</p>
       </div>
 
-      <button class="button button_type_add" type="button" id="open-add">
+      <button class="button button_type_add button_type_open-add" type="button">
         <picture>
           <source srcset="./images/Add-Button-big.svg" media="(max-width: 720px)">
           <img src="./images/Add-Button.svg" alt="кнопка для добавления карточек">
@@ -63,40 +63,41 @@
 
   <div class="popup popup_edit">
     <div class="popup__container">
-      <button class="button" type="button" id="close-edit"><img src="./images/Close-Button.svg" alt="кнопка-крестик" class="button button_type_close"></button>
+      <button class="button button_type_close-edit" type="button"><img src="./images/Close-Button.svg" alt="кнопка-крестик" class="button button_type_close"></button>
 
       <h2 class="popup__title">Редактировать профиль</h2>
 
       <form class="popup__form popup__form_edit" name="edit-form">
         <input type="text" value="Ксения Мадей" name="имя" class="popup__item popup__item_type_name" placeholder="Ваше имя" required>
         <input type="text" value="Инженер-конструктор, студентка Практикума" name="описание" class="popup__item popup__item_type_job" placeholder="Описание профиля" required>
-        <button type="submit" class="button button_type_save" id="save-edit">Сохранить</button>
+        <button type="submit" class="button button_type_save">Сохранить</button>
       </form>
     </div>
   </div>
 
   <div class="popup popup_add">
     <div class="popup__container">
-      <button class="button" type="button" id="close-add"><img src="./images/Close-Button.svg" alt="кнопка-крестик" class="button button_type_close"></button>
+      <button class="button button_type_close-add" type="button"><img src="./images/Close-Button.svg" alt="кнопка-крестик" class="button button_type_close"></button>
 
       <h2 class="popup__title">Новое место</h2>
 
       <form class="popup__form popup__form_add" name="add-form">
         <input type="text" value="" name="Название" class="popup__item popup__item_type_card-name" placeholder="Название" required>
-        <input type="text" value="" name="Ссылка на картинку" class="popup__item popup__item_type_card-edit" placeholder="Ссылка на картинку" required>
-        <button type="submit" class="button button_type_save" id="save-add">Сохранить</button>
+        <input type="text" value="" name="Ссылка на картинку" class="popup__item popup__item_type_card-link" placeholder="Ссылка на картинку" required>
+        <button type="submit" class="button button_type_save">Сохранить</button>
       </form>
     </div>
   </div>
 
-  <div class="popup popup_card">
-    <div class="popup__card-container">
-      <button class="button" type="button" id="close-card"><img src="./images/Close-Button.svg" alt="кнопка-крестик" class="button button_type_close"></button>
-      <img src="#" alt="#" id="popup__card-photo" class="popup__card-photo">
-      <p class="popup__card-name"></p>
+  <div class="popup popup_preview">
+    <div class="popup__preview-container">
+      <button class="button" type="button"><img src="./images/Close-Button.svg" alt="кнопка-крестик" class="button button_type_close"></button>
+      <img src="#" alt="#" class="popup__preview-photo">
+      <p class="popup__preview-name"></p>
     </div>
   </div>
 
+  <script src="./scripts/initialCards.js"></script>
   <script src="./scripts/index.js"></script>
 </body>
 </html>

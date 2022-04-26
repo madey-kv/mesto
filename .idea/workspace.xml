@@ -3,7 +3,18 @@
   <component name="ChangeListManager">
     <list default="true" id="e5df893b-0782-44fe-8da3-554c854210c8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/popup/__card-container/popup__card-container.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/popup/__preview-container/popup__preview-container.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/popup/__card-name/popup__card-name.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/popup/__preview-name/popup__preview-name.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/popup/__card-photo/popup__card-photo.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/popup/__preview-photo/popup__preview-photo.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/dagestan.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/kalmykia.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/moscow.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/saint-petersburg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/sevastopol.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/sochi.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -77,7 +88,8 @@
       <workItem from="1650871758497" duration="8751000" />
       <workItem from="1650885673044" duration="6792000" />
       <workItem from="1650892638441" duration="81000" />
-      <workItem from="1650892762303" duration="4560000" />
+      <workItem from="1650892762303" duration="5159000" />
+      <workItem from="1650957321237" duration="7830000" />
     </task>
     <servers />
   </component>

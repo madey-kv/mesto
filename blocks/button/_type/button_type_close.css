@@ -2,7 +2,7 @@
   position: absolute;
   top: -40px;
   right: -40px;
-  background-color: rgba(0, 0, 0, 0.0);
+  background-color: transparent;
 }
 
 @media (max-width: 540px) {
