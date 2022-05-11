@@ -70,13 +70,13 @@
       <form class="popup__form popup__form_edit" name="edit-form" novalidate>
         <div class="popup__form-item">
           <input id="name" value="Ксения Мадей" name="имя" class="popup__item popup__item_type_name" placeholder="Ваше имя" required minlength="2" maxlength="40">
-          <span id="name-error" class="popup__item_error"></span>
+          <span id="name-error" class="popup__item_type_error"></span>
         </div>
         <div class="popup__form-item">
           <input id="description" value="Инженер-конструктор, студентка Практикума" name="описание" class="popup__item popup__item_type_job" placeholder="Описание профиля" required minlength="2" maxlength="200">
-          <span id="description-error" class="popup__item_error"></span>
+          <span id="description-error" class="popup__item_type_error"></span>
         </div>
-        <button type="submit" class="button button_type_save button_type_save_edit">Сохранить</button>
+        <button type="submit" class="button button_type_save button_type_save-edit">Сохранить</button>
       </form>
     </div>
   </div>
@@ -90,13 +90,13 @@
       <form class="popup__form popup__form_add" name="add-form">
         <div class="popup__form-item">
           <input id="card" value="" name="Название" class="popup__item popup__item_type_card-name" placeholder="Название" required minlength="2" maxlength="30">
-          <span id="card-error" class="popup__item_error"></span>
+          <span id="card-error" class="popup__item_type_error"></span>
         </div>
         <div class="popup__form-item popup__form-item_invalid">
           <input id="url" type="url" value="" name="Ссылка на картинку" class="popup__item popup__item_type_card-link" placeholder="Ссылка на картинку" required>
-          <span id="url-error" class="popup__item_error"></span>
+          <span id="url-error" class="popup__item_type_error"></span>
         </div>
-        <button type="submit" class="button button_type_save button_type_save_add">Сохранить</button>
+        <button type="submit" class="button button_type_save button_type_save-add">Сохранить</button>
       </form>
     </div>
   </div>

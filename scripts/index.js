@@ -4,7 +4,7 @@ const buttonOpenPopupEdit = page.querySelector('.button_type_open-edit');
 const buttonOpenPopupAdd = page.querySelector('.button_type_open-add');
 const buttonClosePopupEdit = page.querySelector('.button_type_close-edit');
 const buttonClosePopupAdd = page.querySelector('.button_type_close-add');
-const buttonSavePopupAdd = page.querySelector('.button_type_save_add');
+const buttonSavePopupAdd = page.querySelector('.button_type_save-add');
 
 const popupEdit = page.querySelector('.popup_edit');
 const popupAdd = page.querySelector('.popup_add');
