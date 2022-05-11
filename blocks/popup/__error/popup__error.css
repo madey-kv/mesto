@@ -1,4 +1,4 @@
-.popup__item_type_error {
+.popup__error {
     color: red;
     visibility: hidden;
     position: absolute;

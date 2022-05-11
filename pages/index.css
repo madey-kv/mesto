@@ -10,7 +10,7 @@
 @import url(../blocks/popup/__form-item/popup__form-item.css);
 @import url(../blocks/popup/__form-item/_invalid/popup__form-item_invalid.css);
 @import url(../blocks/popup/__item/popup__item.css);
-@import url(../blocks/popup/__item/_type/popup__item_type_error.css);
+@import url(../blocks/popup/__error/popup__error.css);
 @import url(../blocks/popup/__preview-photo/popup__preview-photo.css);
 @import url(../blocks/popup/__preview-name/popup__preview-name.css);
 @import url(../blocks/button/button.css);
