@@ -1,0 +1,9 @@
+.popup__item_error {
+    color: red;
+    visibility: hidden;
+    position: absolute;
+    top: 32px;
+    left: 0;
+    font-size: 12px;
+    line-height: 12px;
+}

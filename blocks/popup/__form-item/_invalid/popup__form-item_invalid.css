@@ -1,0 +1,7 @@
+.popup__form-item_invalid .popup__item_error {
+    visibility: visible;
+}
+
+.popup__form-item_invalid .popup__item {
+    border-bottom: 1px solid red;
+}

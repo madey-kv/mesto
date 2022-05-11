@@ -1,5 +1,7 @@
 .button {
-  background-color: inherit;
+  background-color: #000;
+  color: #fff;
+  border-radius: 2px;
   border: none;
   max-width: 100%;
   height: auto;

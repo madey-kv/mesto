@@ -4,6 +4,7 @@ const buttonOpenPopupEdit = page.querySelector('.button_type_open-edit');
 const buttonOpenPopupAdd = page.querySelector('.button_type_open-add');
 const buttonClosePopupEdit = page.querySelector('.button_type_close-edit');
 const buttonClosePopupAdd = page.querySelector('.button_type_close-add');
+const buttonSavePopupAdd = page.querySelector('.button_type_save_add');
 
 const popupEdit = page.querySelector('.popup_edit');
 const popupAdd = page.querySelector('.popup_add');
@@ -27,11 +28,6 @@ const popupName = page.querySelector('.popup__preview-name');
 
 function openPopup(popup) {
   popup.classList.add('popup_opened');
-}
-
-function openPopupAdd () {
-  openPopup(popupAdd);
-  formElementAdd.reset();
 }
 
 function closePopup(popup) {
@@ -99,9 +95,35 @@ function formSubmitHandlerAdd(event) {
   closePopup(popupAdd);
 }
 
-buttonOpenPopupEdit.addEventListener('click', () => openPopup(popupEdit));
-buttonOpenPopupAdd.addEventListener('click', openPopupAdd);
+enableValidation();
+
+const eventKeyHandler = (evt) => {
+  const openedPopup = document.querySelector('.popup_opened');
+  if (evt.key === "Escape") closePopup(openedPopup);
+}
+
+const overlayClickHandler = (evt) => {
+  closePopup(evt.target);
+}
+
+page.addEventListener('keydown', eventKeyHandler);
+page.addEventListener('click', overlayClickHandler);
+
+buttonOpenPopupEdit.addEventListener('click', function (evt) {
+  openPopup(popupEdit);
+  nameInput.value = name.textContent;
+  jobInput.value = job.textContent;
+  enableValidation();
+});
+buttonOpenPopupAdd.addEventListener('click', function (evt) {
+  disableButton(buttonSavePopupAdd);
+  openPopup(popupAdd);
+  formElementAdd.reset();
+});
+
 buttonClosePopupEdit.addEventListener('click', () => closePopup(popupEdit));
 buttonClosePopupAdd.addEventListener('click', () => closePopup(popupAdd));
-formElementEdit.addEventListener('submit', formSubmitHandlerEdit);
+
+formElementEdit.addEventListener('submit',  formSubmitHandlerEdit);
 formElementAdd.addEventListener('submit', formSubmitHandlerAdd);
+

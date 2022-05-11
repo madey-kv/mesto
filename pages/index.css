@@ -7,10 +7,14 @@
 @import url(../blocks/popup/__container/popup__container.css);
 @import url(../blocks/popup/__form/popup__form.css);
 @import url(../blocks/popup/__title/popup__title.css);
+@import url(../blocks/popup/__form-item/popup__form-item.css);
+@import url(../blocks/popup/__form-item/_invalid/popup__form-item_invalid.css);
 @import url(../blocks/popup/__item/popup__item.css);
+@import url(../blocks/popup/__item/_error/popup__item_error.css);
 @import url(../blocks/popup/__preview-photo/popup__preview-photo.css);
 @import url(../blocks/popup/__preview-name/popup__preview-name.css);
 @import url(../blocks/button/button.css);
+@import url(../blocks/button/_disabled/button_disabled.css);
 @import url(../blocks/button/_type/button_type_add.css);
 @import url(../blocks/button/_type/button_type_close.css);
 @import url(../blocks/button/_type/button_type_like.css);
