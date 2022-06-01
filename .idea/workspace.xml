@@ -5,6 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/initialCards.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/initialCards.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/validate.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/validate.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -93,7 +94,14 @@
       <workItem from="1652176799458" duration="14038000" />
       <workItem from="1652283739361" duration="8678000" />
       <workItem from="1652458939335" duration="943000" />
-      <workItem from="1652521717915" duration="20595000" />
+      <workItem from="1652521717915" duration="21193000" />
+      <workItem from="1652603654840" duration="18000" />
+      <workItem from="1652629689989" duration="599000" />
+      <workItem from="1653132638174" duration="35000" />
+      <workItem from="1653829064701" duration="5721000" />
+      <workItem from="1653925426492" duration="8085000" />
+      <workItem from="1654013271608" duration="8270000" />
+      <workItem from="1654096590686" duration="4940000" />
     </task>
     <servers />
   </component>
