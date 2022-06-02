@@ -9,7 +9,6 @@ const buttonOpenPopupEdit = page.querySelector('.button_type_open-edit');
 const buttonOpenPopupAdd = page.querySelector('.button_type_open-add');
 const buttonClosePopupEdit = page.querySelector('.button_type_close-edit');
 const buttonClosePopupAdd = page.querySelector('.button_type_close-add');
-const buttonSavePopupAdd = page.querySelector('.button_type_save-add');
 
 const popupEdit = page.querySelector('.popup_edit');
 const popupAdd = page.querySelector('.popup_add');
@@ -74,7 +73,6 @@ page.addEventListener('click', function (evt) {
 });
 
 function handleAddCardFormSubmit(event) {
-  disableButton(buttonSavePopupAdd, {});
   event.preventDefault();
 
   const item = [];
@@ -86,6 +84,9 @@ function handleAddCardFormSubmit(event) {
   cardsList.prepend(newCard);
   closePopup(popupAdd);
 }
+
+new FormValidator(validationObj, popupEdit).enableValidation()
+new FormValidator(validationObj, popupAdd).enableValidation()
 
 const clearInvalidFields = (formElement) => {
   const inputList = Array.from(formElement.querySelectorAll('.popup__item'));
@@ -99,13 +100,11 @@ buttonOpenPopupEdit.addEventListener('click', function (evt) {
   nameInput.value = name.textContent;
   jobInput.value = job.textContent;
   clearInvalidFields(popupEdit);
-  new FormValidator(validationObj, popupEdit).enableValidation()
 });
 buttonOpenPopupAdd.addEventListener('click', function (evt) {
   openPopup(popupAdd);
   formElementAdd.reset();
   clearInvalidFields(popupAdd);
-  new FormValidator(validationObj, popupAdd).enableValidation()
 });
 
 buttonClosePopupEdit.addEventListener('click', () => closePopup(popupEdit));
