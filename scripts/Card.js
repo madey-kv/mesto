@@ -62,15 +62,15 @@ class Card {
     }
 
     _setEventListeners() {
-        this._element.querySelector('.button_type_card-open').addEventListener('click', () => {
+        this._open.addEventListener('click', () => {
             this._openCardPreview();
         });
 
-        this._element.querySelector('.button_type_delete').addEventListener('click', () => {
+        this._delete.addEventListener('click', () => {
             this._deleteCard();
         });
 
-        this._element.querySelector('.button_type_like').addEventListener('click', () => {
+        this._like.addEventListener('click', () => {
             this._likeCard();
         });
     }
@@ -78,15 +78,18 @@ class Card {
     generate() {
         this._getElement();
 
-        this._setEventListeners();
+        this._photo = this._element.querySelector('.cards__photo');
+        this._photo.src = this._link;
+        this._photo.alt = this._name;
 
-        const cardPhoto = this._element.querySelector('.cards__photo');
-        cardPhoto.src = this._link;
-        cardPhoto.alt = this._name;
-        this._element.querySelector('.cards__title').textContent = this._name;
+        this._title = this._element.querySelector('.cards__title');
+        this._title.textContent = this._name;
 
         this._item = this._element.querySelector('.cards__item')
-        this._like = this._element.querySelector('.button_type_like')
+        this._like = this._element.querySelector('.button_type_like');
+        this._delete = this._element.querySelector('.button_type_delete');
+        this._open = this._element.querySelector('.button_type_card-open');
+        this._setEventListeners();
 
         return this._element;
     }
