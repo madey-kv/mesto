@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mesto | Russia</title>
+
+</head>
+<body class="page">
+<header class="header">
+    <img src="<%=require('./images/logo.svg')%>" alt="логотип сайта" class="logo">
+
+    <div class="profile">
+        <img src="<%=require('./images/my-photo.jpg')%>" alt="аватар профиля" class="profile__photo">
+
+        <div class="profile__info">
+            <div class="profile__title">
+                <h1 class="profile__name">Ксения Мадей</h1>
+
+                <button type="button" class="button button_type_open-edit">
+                    <picture>
+                        <source srcset="<%=require('./images/Edit-Button-small.svg')%>" media="(max-width: 440px)">
+                        <img src="<%=require('./images/Edit-Button.svg')%>" alt="кнопка редактирования профиля">
+                    </picture>
+                </button>
+            </div>
+            <p class="profile__description">Инженер-конструктор, студентка Практикума</p>
+        </div>
+
+        <button class="button button_type_add button_type_open-add" type="button">
+            <picture>
+                <source srcset="<%=require('./images/Add-Button-big.svg')%>" media="(max-width: 720px)">
+                <img src="<%=require('./images/Add-Button.svg')%>" alt="кнопка для добавления карточек">
+            </picture>
+        </button>
+    </div>
+</header>
+
+<main>
+    <section class="cards">
+        <ul class="cards__list">
+
+        </ul>
+
+        <template class="cards-template">
+            <li class="cards__item">
+                <button class="button button_type_card-open"><img src="#" alt="#" class="cards__photo"></button>
+                <button class="button button_type_delete"><img src="<%=require('./images/delete.svg')%>" alt="кнопка удаления"></button>
+                <div class="cards__text">
+                    <h2 class="cards__title"></h2>
+                    <button class="button button_type_like" type="button"></button>
+                </div>
+            </li>
+        </template>
+    </section>
+</main>
+
+<footer class="footer">
+    <p class="footer__copyright">&copy;2022 Mesto Russia</p>
+</footer>
+
+<div class="popup popup_edit">
+    <div class="popup__container">
+        <button class="button button_type_close" type="button"><img src="<%=require('./images/Close-Button.svg')%>" alt="кнопка-крестик"></button>
+
+        <h2 class="popup__title">Редактировать профиль</h2>
+
+        <form class="popup__form popup__form_edit" name="edit-form" novalidate>
+            <div class="popup__form-item">
+                <input id="name" value="Ксения Мадей" name="name" class="popup__item popup__item_type_name" placeholder="Ваше имя" required minlength="2" maxlength="40">
+                <span id="name-error" class="popup__error"></span>
+            </div>
+            <div class="popup__form-item">
+                <input id="description" value="Инженер-конструктор, студентка Практикума" name="description" class="popup__item popup__item_type_job" placeholder="Описание профиля" required minlength="2" maxlength="200">
+                <span id="description-error" class="popup__error"></span>
+            </div>
+            <button type="submit" class="button button_type_save button_type_save-edit">Сохранить</button>
+        </form>
+    </div>
+</div>
+
+<div class="popup popup_add">
+    <div class="popup__container">
+        <button class="button button_type_close" type="button"><img src="<%=require('./images/Close-Button.svg')%>" alt="кнопка-крестик"></button>
+
+        <h2 class="popup__title">Новое место</h2>
+
+        <form class="popup__form popup__form_add" name="add-form">
+            <div class="popup__form-item">
+                <input id="card" value="" name="name" class="popup__item popup__item_type_card-name" placeholder="Название" required minlength="2" maxlength="30">
+                <span id="card-error" class="popup__error"></span>
+            </div>
+            <div class="popup__form-item">
+                <input id="url" type="url" value="" name="link" class="popup__item popup__item_type_card-link" placeholder="Ссылка на картинку" required>
+                <span id="url-error" class="popup__error"></span>
+            </div>
+            <button type="submit" class="button button_type_save button_type_save-add">Сохранить</button>
+        </form>
+    </div>
+</div>
+
+<div class="popup popup_preview">
+    <div class="popup__preview-container">
+        <button class="button" type="button"><img src="<%=require('./images/Close-Button.svg')%>" alt="кнопка-крестик" class="button button_type_close"></button>
+        <img src="#" alt="#" class="popup__preview-photo">
+        <p class="popup__preview-name"></p>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,9 +1,4 @@
-import {openPopup, popupPreview} from "./index.js";
-
 export {card, Card}
-
-const popupImage = document.querySelector('.popup__preview-photo');
-const popupName = document.querySelector('.popup__preview-name');
 
 const card = [
     {
@@ -33,28 +28,23 @@ const card = [
 ];
 
 class Card {
-    constructor(item, template) {
+    constructor(item, template, handleCardClick) {
         this._name = item.name;
         this._link = item.link;
         this._template = template;
+        this._handleCardClick = handleCardClick;
     }
 
     _getElement() {
-        const cardElement = document.querySelector(this._template).content.cloneNode(true);
-        this._element = cardElement;
+        this._element = document
+            .querySelector(this._template)
+            .content.cloneNode(true);
 
-        return cardElement;
-    }
-
-    _openCardPreview() {
-        popupImage.src = this._link;
-        popupImage.alt = this._name;
-        popupName.textContent = this._name;
-        openPopup(popupPreview);
+        return this._element;
     }
 
     _deleteCard () {
-        this._item.remove();
+       this._delete.parentNode.remove()
     }
 
     _likeCard () {
@@ -63,7 +53,7 @@ class Card {
 
     _setEventListeners() {
         this._open.addEventListener('click', () => {
-            this._openCardPreview();
+            this._handleCardClick();
         });
 
         this._delete.addEventListener('click', () => {
@@ -85,7 +75,6 @@ class Card {
         this._title = this._element.querySelector('.cards__title');
         this._title.textContent = this._name;
 
-        this._item = this._element.querySelector('.cards__item')
         this._like = this._element.querySelector('.button_type_like');
         this._delete = this._element.querySelector('.button_type_delete');
         this._open = this._element.querySelector('.button_type_card-open');

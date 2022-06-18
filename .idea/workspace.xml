@@ -2,11 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e5df893b-0782-44fe-8da3-554c854210c8" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/button/_type/button_type_like-active.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/button/_type/button_type_like-active.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/button/_type/button_type_like.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/button/_type/button_type_like.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Add-Button-big.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/Add-Button-big.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Add-Button.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/Add-Button.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Close-Button.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/Close-Button.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Edit-Button-small.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/Edit-Button-small.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Edit-Button.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/Edit-Button.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Like-Button-active.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/Like-Button-active.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Like-Button.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/Like-Button.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/delete.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/delete.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/logo.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/my-photo.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/my-photo.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/Card.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/Card.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/FormValidator.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/FormValidator.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/index.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +31,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -39,31 +54,43 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/xeniama/dev/mesto&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/xeniama/dev/mesto/src&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/blocks/popup/__error" />
       <recent name="$PROJECT_DIR$/blocks/popup/_card-active" />
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.index.html (1)">
-    <configuration name="index.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/index.js/index.html" useBuiltInWebServerPort="true">
+    <configuration name="index.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/main.css/src/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="index.html (2)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/main.css/dist/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/mesto/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="index.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/scripts/index.js" working-dir="$PROJECT_DIR$/scripts">
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/index.js/src/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="index.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/index.js" working-dir="$PROJECT_DIR$/scripts">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JavaScript Debug.index.html (1)" />
+        <item itemvalue="JavaScript Debug.index.html (2)" />
         <item itemvalue="Node.js.index.js" />
         <item itemvalue="JavaScript Debug.index.html" />
       </list>
@@ -104,7 +131,20 @@
       <workItem from="1654096590686" duration="5713000" />
       <workItem from="1654185462877" duration="3277000" />
       <workItem from="1654279662675" duration="600000" />
-      <workItem from="1654320707579" duration="9429000" />
+      <workItem from="1654320707579" duration="11014000" />
+      <workItem from="1655035349592" duration="10817000" />
+      <workItem from="1655120981215" duration="8723000" />
+      <workItem from="1655143849818" duration="3181000" />
+      <workItem from="1655318152409" duration="4114000" />
+      <workItem from="1655392574859" duration="9624000" />
+      <workItem from="1655491339014" duration="2550000" />
+      <workItem from="1655544153467" duration="112000" />
+      <workItem from="1655544956763" duration="4268000" />
+      <workItem from="1655549312164" duration="324000" />
+      <workItem from="1655549706665" duration="1306000" />
+      <workItem from="1655554449744" duration="170000" />
+      <workItem from="1655554623361" duration="2737000" />
+      <workItem from="1655557397768" duration="938000" />
     </task>
     <servers />
   </component>
