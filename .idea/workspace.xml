@@ -2,25 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e5df893b-0782-44fe-8da3-554c854210c8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/button/_type/button_type_like-active.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/button/_type/button_type_like-active.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/button/_type/button_type_like.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/button/_type/button_type_like.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/Add-Button-big.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/Add-Button-big.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/Add-Button.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/Add-Button.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/Close-Button.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/Close-Button.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/Edit-Button-small.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/Edit-Button-small.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/Edit-Button.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/Edit-Button.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/Like-Button-active.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/Like-Button-active.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/Like-Button.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/Like-Button.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/delete.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/delete.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/logo.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/my-photo.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/my-photo.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/Card.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/Card.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/FormValidator.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/FormValidator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/Popup.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/Popup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/PopupWithForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/PopupWithForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/PopupWithImage.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/PopupWithImage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/UserInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/UserInfo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,6 +134,10 @@
       <workItem from="1655554449744" duration="170000" />
       <workItem from="1655554623361" duration="2737000" />
       <workItem from="1655557397768" duration="938000" />
+      <workItem from="1655558379409" duration="606000" />
+      <workItem from="1655651930902" duration="8383000" />
+      <workItem from="1655741020827" duration="4547000" />
+      <workItem from="1655745624637" duration="395000" />
     </task>
     <servers />
   </component>

@@ -1,4 +1,4 @@
-class FormValidator {
+export default class FormValidator {
     constructor(obj, form) {
         this._form = form;
         this._inputList = Array.from(this._form.querySelectorAll(obj.inputSelector));
@@ -76,12 +76,4 @@ class FormValidator {
     }
 }
 
-const validationObj = ({
-    formSelector: '.popup__form',
-    inputSelector: '.popup__item',
-    submitButtonSelector: '.button_type_save',
-    inactiveButtonClass: 'button_disabled',
-    inputErrorClass: 'popup__form-item_invalid'
-});
-
-export { FormValidator, validationObj };
+export { FormValidator };

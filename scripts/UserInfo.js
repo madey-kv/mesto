@@ -10,4 +10,9 @@ export default class UserInfo {
         }
         return userInfo
     }
+
+    setUserInfo (item) {
+        this._name.textContent = item.name;
+        this._job.textContent = item.description;
+    }
 }
