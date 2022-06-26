@@ -1,0 +1,10 @@
+.button_type_change-avatar {
+    background-image: url(../../../src/images/change-photo.svg);
+    background-repeat: no-repeat;
+    background-size: 26px;
+background-position: 47px 47px;
+}
+
+.button_type_change-avatar:hover {
+    opacity: 1;
+}
