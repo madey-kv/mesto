@@ -1,109 +1,71 @@
 export default class Api {
   constructor(item) {
-    this._url = item.url;
-    this._headers = item.headers;
+    this._baseUrl = item.baseUrl
+    this._headers = item.headers
   }
 
-  getInitialCards() {
-    return fetch(`${this._url}cards`, {
-      headers: this._headers
-    })
-      .then(res => {
-        if (res.ok) {
-          return res.json();
-        }
-        return Promise.reject(`Ошибка: ${res.status}`);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }
-
-  addNewCard(cards) {
-    return fetch(`${this._url}cards`, {
-      method: 'POST',
+  _fetch(partUrl, method, body) {
+    const fullUrl = `${this._baseUrl}${partUrl}`
+    return fetch(fullUrl, {
+      method,
       headers: this._headers,
-      body: JSON.stringify({
-        name: cards.name,
-        link: cards.link
-      })
+      body: body ? body() : null
     })
       .then(res => {
         if (res.ok) {
           return res.json();
         }
-        return Promise.reject(`Ошибка: ${res.status}`);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }
-
-  deleteCard(card) {
-    return fetch(`${this._url}cards/${card}`, {
-      method: 'DELETE',
-      headers: this._headers
-    })
-      .then(res => {
-        if (res.ok) {
-          return res.json();
-        }
-
-        return Promise.reject(`Ошибка: ${res.status}`);
+        return Promise.reject(`Ошибка: ${res.status}`)
       })
   }
 
   getUserInfo() {
-    return fetch(`${this._url}users/me`, {
-      headers: this._headers
-    })
-      .then(res => {
-        if (res.ok) {
-          return res.json();
-        }
-        return Promise.reject(`Ошибка: ${res.status}`);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    return this._fetch('users/me', 'GET')
   }
 
-  updateUserInfo(user) {
-    return fetch(`${this._url}users/me`, {
-      method: 'PATCH',
-      headers: this._headers,
-      body: JSON.stringify({
+  getInitialCards() {
+    return this._fetch('cards', 'GET')
+  }
+
+  editUserInfo(user) {
+    const body = () => {
+      return JSON.stringify({
         name: user.name,
         about: user.about
       })
-    })
-      .then(res => {
-        if (res.ok) {
-          return res.json();
-        }
-        return Promise.reject(`Ошибка: ${res.status}`);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    }
+    return this._fetch('users/me', 'PATCH', body)
   }
 
-  changeAvatar(avatar) {
-    return fetch(`${this._url}users/me/avatar`, {
-      method: 'PATCH',
-      headers: this._headers,
-      body: JSON.stringify({
+  addNewCard(card) {
+    const body = () => {
+      return JSON.stringify({
+        name: card.name,
+        link: card.link
+      })
+    }
+    return this._fetch('cards', 'POST', body)
+  }
+
+
+  deleteCard(cardId) {
+    return this._fetch(`cards/${cardId}`, 'DELETE')
+  }
+
+  addLike(cardId) {
+    return this._fetch(`cards/${cardId}/likes`, 'PUT')
+  }
+
+  deleteLike(cardId) {
+    return this._fetch(`cards/${cardId}/likes`, 'DELETE')
+  }
+
+  editUserAvatar({ avatar }) {
+    const body = () => {
+      return JSON.stringify({
         avatar: avatar
       })
-    })
-      .then(res => {
-        if (res.ok) {
-          return res.json();
-        }
-        return Promise.reject(`Ошибка: ${res.status}`);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    }
+    return this._fetch('users/me/avatar', 'PATCH', body)
   }
 }

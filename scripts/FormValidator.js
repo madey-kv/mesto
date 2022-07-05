@@ -71,7 +71,6 @@ export default class FormValidator {
 
     enableValidation() {
         this._toggleButtonState();
-        this._isValid();
         this._setInputListeners()
     }
 }
