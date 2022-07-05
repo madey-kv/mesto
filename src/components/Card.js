@@ -48,8 +48,8 @@ export default class Card {
   }
 
   _likeCard(evt) {
-    // const hasLike = evt.target.classList.contains('button_type_like')
-    if (!evt.target.classList.contains('button_type_like-active')) {
+    const isLiked = evt.target.classList.contains('button_type_like-active')
+    if (!isLiked) {
       this._handleLikeCard(this._cardId)
         .then(res => {
           evt.target.classList.add('button_type_like-active')

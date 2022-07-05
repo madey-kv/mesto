@@ -16,14 +16,14 @@ import {
   placeInput,
   titleInput
 } from '../utils/constants.js'
-import Card from '../scripts/Card.js';
-import PopupWithForm from '../scripts/PopupWithForm.js';
-import PopupWithImage from '../scripts/PopupWithImage.js';
-import PopupWithConfirmation from '../scripts/PopupWithConfirmation.js';
-import Section from '../scripts/Section.js';
-import UserInfo from '../scripts/UserInfo.js';
-import FormValidator from '../scripts/FormValidator.js';
-import Api from '../scripts/Api.js';
+import Card from '../components/Card.js';
+import PopupWithForm from '../components/PopupWithForm.js';
+import PopupWithImage from '../components/PopupWithImage.js';
+import PopupWithConfirmation from '../components/PopupWithConfirmation.js';
+import Section from '../components/Section.js';
+import UserInfo from '../components/UserInfo.js';
+import FormValidator from '../components/FormValidator.js';
+import Api from '../components/Api.js';
 
 import "./index.css"
 
@@ -114,7 +114,7 @@ function handleFormAddSubmit() {
       popupAdd.closePopup()
     })
     .catch(error => console.log(error))
-    .finally(() => popupAdd.waitForLoading(false, 'add'))
+    .finally(() => popupAdd.waitForLoading(false, 'popupAdd'))
 }
 
 const popupConfirm = new PopupWithConfirmation('.popup_confirm', handleFormConfirmSubmit)
