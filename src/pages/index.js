@@ -13,8 +13,6 @@ import {
   nameInput,
   jobInput,
   validationObj,
-  placeInput,
-  titleInput
 } from '../utils/constants.js'
 import Card from '../components/Card.js';
 import PopupWithForm from '../components/PopupWithForm.js';
@@ -37,11 +35,11 @@ const popupPreview = new PopupWithImage('.popup_preview')
 
 const popupEdit = new PopupWithForm('.popup_edit', handleFormEditSubmit)
 
-function handleFormEditSubmit() {
+function handleFormEditSubmit({name, description}) {
   popupEdit.waitForLoading(true)
   api.editUserInfo({
-    name: nameInput.value,
-    about: jobInput.value
+    name: name,
+    about: description
   })
     .then(result => {
       userInfo.setUserInfo(result)
@@ -74,9 +72,8 @@ const cardsList = new Section(
 function renderCard(item) {
   const card = new Card(item, '.cards-template', defaultUserInfo, {
     handleCardClick,
-    handleDeleteClick,
-    handleLikeCard,
-    handleDislikeCard
+    handleDeleteClick: () => handleDeleteClick(card._cardId, card),
+    handleLikeCard: () => handleLikeCard(card)
   })
   cardList.push({
     cardElement: card,
@@ -89,25 +86,49 @@ function handleCardClick(card) {
   popupPreview.openPopup(card)
 }
 
-function handleDeleteClick(cardId) {
-  popupConfirm.openPopup(cardId)
+const popupConfirm = new PopupWithConfirmation('.popup_confirm')
+
+function handleDeleteClick(cardId, card) {
+  popupConfirm.openPopup(cardId);
+  popupConfirm.setCallback(() => {
+    api.deleteCard(cardId)
+      .then((res) => {
+        card.deleteCard(res)
+        popupConfirm.closePopup()
+      })
+      .catch(error => console.log(error))
+  })
 }
 
-function handleLikeCard(cardId) {
-  return api.addLike(cardId)
-}
-
-function handleDislikeCard(cardId) {
-  return api.deleteLike(cardId)
+function handleLikeCard (card) {
+  if (card.isLiked()) {
+    api.deleteLike(card.returnId())
+      .then((res) => {
+        card.dislike()
+        card.setNumOfLikes(res.likes)
+      })
+      .catch((error) => {
+        console.log(error)
+      })
+  } else {
+    api.addLike(card.returnId())
+      .then((res) => {
+        card.like()
+        card.setNumOfLikes(res.likes)
+      })
+      .catch((error) => {
+        console.log(error)
+      })
+  }
 }
 
 const popupAdd = new PopupWithForm('.popup_add', handleFormAddSubmit)
 
-function handleFormAddSubmit() {
+function handleFormAddSubmit({place, link}) {
   popupAdd.waitForLoading(true)
   api.addNewCard({
-    name: titleInput.value,
-    link: placeInput.value
+    name: place,
+    link: link
   })
     .then(result => {
       cardsList.addItem(renderCard(result))
@@ -115,21 +136,6 @@ function handleFormAddSubmit() {
     })
     .catch(error => console.log(error))
     .finally(() => popupAdd.waitForLoading(false, 'popupAdd'))
-}
-
-const popupConfirm = new PopupWithConfirmation('.popup_confirm', handleFormConfirmSubmit)
-
-function handleFormConfirmSubmit(cardId) {
-  api.deleteCard(cardId)
-    .then(() => {
-      cardList.forEach(card => {
-        if (card.cardId === cardId) {
-          card.cardElement.deleteCard()
-        }
-      })
-      popupConfirm.closePopup()
-    })
-    .catch(error => console.log(error))
 }
 
 const promises = [defaultUserInfo, api.getInitialCards()];
@@ -149,6 +155,12 @@ const changeFormValidator = new FormValidator(validationObj, popupTypeChange);
 profileFormValidator.enableValidation()
 cardFormValidator.enableValidation()
 changeFormValidator.enableValidation()
+
+popupAdd.setEventListeners();
+popupEdit.setEventListeners();
+popupAvatar.setEventListeners();
+popupConfirm.setEventListeners();
+popupPreview.setEventListeners();
 
 function openPopup(form, popup) {
   form.resetValidation()
